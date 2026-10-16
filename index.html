@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jessie's personal portfolio website." />
+  <title>Jessie | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="#home">Jessie<span>.</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">HELLO, I'M</p>
+        <h1>Jessie <span>Jeevana</span></h1>
+        <h2>BTech Student · Aspiring Web Developer</h2>
+        <p class="intro">I’m a student who enjoys learning new technologies and building simple, useful digital experiences. I’m currently improving my web development and programming skills.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">View My Projects</a>
+          <a class="button secondary" href="#contact">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Introduction card">
+        <div class="avatar">JJ</div>
+        <p class="card-label">CURRENTLY LEARNING</p>
+        <h3>Web Development</h3>
+        <p>HTML · CSS · JavaScript</p>
+        <div class="mini-tags"><span>Curious</span><span>Consistent</span><span>Creative</span></div>
+      </div>
+    </section>
+
+    <section class="section soft-bg" id="about">
+      <div class="container narrow">
+        <p class="eyebrow">A LITTLE ABOUT ME</p>
+        <h2 class="section-title">Learning by building.</h2>
+        <p class="section-text">I’m pursuing BTech in Artificial Intelligence and Data Science. I’m interested in programming, web development, and creating projects that help me learn through practice. My goal is to keep improving my technical skills and prepare for future opportunities.</p>
+      </div>
+    </section>
+
+    <section class="section container" id="skills">
+      <p class="eyebrow">WHAT I'M LEARNING</p>
+      <h2 class="section-title">My Skills</h2>
+      <div class="skills-grid">
+        <article class="skill-card"><span class="skill-icon">⌘</span><h3>HTML</h3><p>Structuring web pages</p></article>
+        <article class="skill-card"><span class="skill-icon">✦</span><h3>CSS</h3><p>Styling and responsive layouts</p></article>
+        <article class="skill-card"><span class="skill-icon">JS</span><h3>JavaScript</h3><p>Adding interactivity</p></article>
+        <article class="skill-card"><span class="skill-icon">Py</span><h3>Python</h3><p>Programming fundamentals</p></article>
+        <article class="skill-card"><span class="skill-icon">J</span><h3>Java</h3><p>Object-oriented programming</p></article>
+        <article class="skill-card"><span class="skill-icon">Git</span><h3>Git & GitHub</h3><p>Managing project code</p></article>
+      </div>
+      <p class="small-note">Edit this section so it reflects the technologies you can confidently explain.</p>
+    </section>
+
+    <section class="section soft-bg" id="projects">
+      <div class="container">
+        <p class="eyebrow">WHAT I'M WORKING ON</p>
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-art portfolio-art"><span>&lt;/&gt;</span></div>
+            <div class="project-content">
+              <p class="project-type">HTML · CSS</p>
+              <h3>Personal Portfolio</h3>
+              <p>A responsive website to introduce myself, share my skills, and showcase my work.</p>
+              <span class="project-status">Current project</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-art calculator-art"><span>＋ − × ÷</span></div>
+            <div class="project-content">
+              <p class="project-type">HTML · CSS · JavaScript</p>
+              <h3>Calculator</h3>
+              <p>A simple interactive calculator for performing basic arithmetic operations.</p>
+              <span class="project-status planned">Planned project</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-art landing-art"><span>✧</span></div>
+            <div class="project-content">
+              <p class="project-type">HTML · CSS</p>
+              <h3>Landing Page</h3>
+              <p>A clean landing page focused on layout, spacing, colors, and responsive design.</p>
+              <span class="project-status planned">Planned project</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container resume-section" id="resume">
+      <div>
+        <p class="eyebrow">MY RESUME</p>
+        <h2 class="section-title">Want to know more?</h2>
+        <p class="section-text">Add your latest resume as <strong>resume.pdf</strong> in this project folder, then the button will let visitors open it.</p>
+      </div>
+      <a class="button primary" href="resume.pdf" target="_blank" rel="noopener">View Resume (add PDF)</a>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container narrow">
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-text">I’m happy to connect with students and people interested in technology and learning.</p>
+        <div class="contact-links">
+          <!-- Replace the placeholders below with your real contact details before publishing. -->
+          <a href="mailto:your-email@example.com">✉ your-email@example.com</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener">in LinkedIn profile — add your profile link</a>
+          <a href="https://github.com/" target="_blank" rel="noopener">⌘ GitHub profile — add your profile link</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Jessie Jeevana. All rights reserved.</p>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
