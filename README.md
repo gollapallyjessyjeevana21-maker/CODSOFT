@@ -1,18 +1,16 @@
-# CodSoft Level 1 — Task 1: Personal Portfolio
+# CODSOFT Portfolio — Jessie Jeevana
 
-A responsive personal portfolio made with HTML and CSS, with a small JavaScript file for the mobile navigation and current year.
+A responsive personal portfolio made with HTML, CSS, and JavaScript for the CodSoft Level 1 Portfolio task.
 
 ## Files
-- `index.html` — page content and sections
-- `style.css` — design and responsive layout
-- `script.js` — mobile menu and footer year
-
-## Before publishing
-1. Replace `your-email@example.com` with your real email.
-2. Replace the LinkedIn and GitHub profile links with your own profile links.
-3. Add your resume PDF to this folder and name it `resume.pdf`.
-4. Update the skills and project descriptions so they accurately reflect your experience.
-5. Open `index.html` in a browser and test all links and the mobile layout.
+- `index.html` — portfolio with About, Skills, Projects, Resume, and Contact sections.
+- `style.css` — responsive styling.
+- `script.js` — mobile navigation and footer year.
+- `calculator.html` — a working basic calculator project.
+- `resume.pdf` — resume PDF linked from the portfolio.
 
 ## Run locally
-Open `index.html` in any modern browser.
+Open `index.html` in a browser. Select **Open calculator** in the Projects section to try the calculator.
+
+## GitHub Pages
+Upload the files to the root of the `CODSOFT` repository and ensure GitHub Pages uses branch `main` and folder `/ (root)`.

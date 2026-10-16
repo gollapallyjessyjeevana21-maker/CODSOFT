@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator | Jessie Jeevana</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .calc-wrap{max-width:420px;margin:65px auto;padding:28px;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);background:#fff}
+    .calc-display{width:100%;padding:18px;margin:12px 0 16px;border:1px solid var(--line);border-radius:12px;font-size:1.6rem;text-align:right;background:#f8f8ff;color:var(--ink)}
+    .calc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .calc-grid button{padding:16px 8px;border:1px solid var(--line);border-radius:10px;background:#f8f8ff;font-size:1.1rem;font-weight:700;cursor:pointer;color:var(--ink)}
+    .calc-grid button:hover{background:#ece9ff}.calc-grid .equals{background:var(--accent);color:#fff}.calc-grid .clear{background:#ffe8e8}
+    .back-link{display:inline-block;margin-top:22px;color:var(--accent);font-weight:700}
+  </style>
+</head>
+<body>
+  <header class="site-header"><nav class="nav container"><a class="logo" href="index.html">Jessie<span>.</span></a><a href="index.html#projects">Back to Projects</a></nav></header>
+  <main class="container"><section class="calc-wrap">
+    <p class="eyebrow">PROJECT 02</p><h1 class="section-title">Simple Calculator</h1>
+    <label for="display">Calculator display</label><input class="calc-display" id="display" value="0" readonly aria-live="polite">
+    <div class="calc-grid">
+      <button class="clear" data-action="clear">C</button><button data-action="delete">⌫</button><button data-value="/">÷</button><button data-value="*">×</button>
+      <button data-value="7">7</button><button data-value="8">8</button><button data-value="9">9</button><button data-value="-">−</button>
+      <button data-value="4">4</button><button data-value="5">5</button><button data-value="6">6</button><button data-value="+">+</button>
+      <button data-value="1">1</button><button data-value="2">2</button><button data-value="3">3</button><button class="equals" data-action="equals">=</button>
+      <button data-value="0">0</button><button data-value=".">.</button>
+    </div><a class="back-link" href="index.html#projects">← Return to portfolio</a>
+  </section></main>
+  <script>
+    const display=document.getElementById('display'); let expression='';
+    document.querySelectorAll('.calc-grid button').forEach(button=>button.addEventListener('click',()=>{
+      const value=button.dataset.value, action=button.dataset.action;
+      if(action==='clear'){expression='';display.value='0';return;}
+      if(action==='delete'){expression=expression.slice(0,-1);display.value=expression||'0';return;}
+      if(action==='equals'){
+        if(!expression || !/^[0-9+*/.() -]+$/.test(expression)) return;
+        try { const result=Function('"use strict"; return ('+expression+')')(); if(Number.isFinite(result)){expression=String(result);display.value=expression;}else{display.value='Error';expression='';} }
+        catch{display.value='Error';expression='';} return;
+      }
+      if(value!==undefined){expression+=value;display.value=expression;}
+    }));
+  </script>
+</body>
+</html>
